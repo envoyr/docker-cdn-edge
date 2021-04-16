@@ -12,4 +12,4 @@ COPY etc/supervisor/conf.d /etc/supervisor/conf.d
 COPY bin /opt/bin
 
 # Start supervisord
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "--loglevel", "warn"]
