@@ -7,6 +7,9 @@ COPY www /app/www
 RUN mkdir -p /app/.composer && \
     chown -R app:app /app
 
+# Setup cache directory
+RUN mkdir -p /data/nginx/cache
+
 # Prepare folders and files
 COPY etc/supervisor/conf.d /etc/supervisor/conf.d
 COPY bin /opt/bin

@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-LIST_COMMAND="ls -l /etc/nginx/conf.d"
+LIST_COMMAND="ls -l /etc/nginx/sites-enabled"
 NEW_FILE_LIST=$($LIST_COMMAND)
 while true; do
   if [ "$OLD_FILE_LIST" != "$NEW_FILE_LIST" ]; then
